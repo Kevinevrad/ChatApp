@@ -15,7 +15,7 @@ class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: couleurBase,
+        backgroundColor: Theme.of(context).backgroundColor,
         body: Stack(
           children: [
             ImageChat(
