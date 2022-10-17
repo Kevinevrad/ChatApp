@@ -4,7 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 class TtextTheme {
   static TextTheme ligthTexttheme = TextTheme(
-    
+      headline6: GoogleFonts.lobster(
+        color: Colors.black,
+        fontSize: 32,
+      ),
       headline2: GoogleFonts.lobsterTwo(
           color: Colors.white, textStyle: TextStyle(fontSize: 100)),
       bodyText1: GoogleFonts.poppins(
@@ -18,6 +21,10 @@ class TtextTheme {
       subtitle1: GoogleFonts.lobsterTwo(fontSize: 30, color: Colors.black));
 
   static TextTheme darkTextTheme = TextTheme(
+      headline6: GoogleFonts.lobster(
+        color: Colors.white,
+        fontSize: 32,
+      ),
       headline2: GoogleFonts.lobsterTwo(
           color: Colors.white, textStyle: TextStyle(fontSize: 100)),
       bodyText1: GoogleFonts.poppins(

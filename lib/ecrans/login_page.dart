@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                'assets/images/img-back.jpg',
+                'assets/images/back1.png',
               ),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
@@ -117,13 +117,11 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Positioned(
-                top: MediaQuery.of(context).size.height / 2.8,
-                left: MediaQuery.of(context).size.width / 2.5,
+                top: MediaQuery.of(context).size.height / 3,
+                left: MediaQuery.of(context).size.width / 2.8,
                 right: MediaQuery.of(context).size.width / 24,
-                child: Text(
-                  'CHATTY',
-                  style: GoogleFonts.lobster(fontSize: 32, color: Colors.black),
-                ))
+                child: Text('CHATTY',
+                    style: Theme.of(context).textTheme.headline6))
           ],
         ),
       ),
