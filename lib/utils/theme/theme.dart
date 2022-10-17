@@ -5,7 +5,9 @@ class TappTheme {
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     textTheme: TtextTheme.ligthTexttheme,
+    
     primarySwatch: const MaterialColor(0xFF4D91FF, <int, Color>{
+      20: Color(0XFFFFFFFF),
       50: Color(0xFF4D91FF),
       100: Color(0xEB3982F7),
       200: Color(0xD73982F7),
@@ -18,5 +20,13 @@ class TappTheme {
       900: Color(0x4B3982F7)
     }),
   );
-  static ThemeData darkTheme = ThemeData(brightness: Brightness.dark);
+  static ThemeData darkTheme = ThemeData(
+      brightness: Brightness.dark,
+       
+      textTheme: TtextTheme.darkTextTheme);
+
+  static ThemeData getTheme(Brightness brightness) {
+    print(brightness);
+    return brightness == Brightness.light ? lightTheme : darkTheme;
+  }
 }
