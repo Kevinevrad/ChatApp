@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(
-                'assets/images/backround.png',
+                'assets/images/img-back.jpg',
               ),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
