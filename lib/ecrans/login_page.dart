@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../variables/var_constantes/image_var.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -18,9 +20,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(
-                'assets/images/back1.png',
-              ),
+              image: AssetImage(imageback),
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
                   Color.fromARGB(66, 0, 0, 0), BlendMode.darken)
@@ -30,12 +30,6 @@ class _LoginPageState extends State<LoginPage> {
         ),
         child: Stack(
           children: [
-            Positioned(
-              right: MediaQuery.of(context).size.height / 6,
-              left: MediaQuery.of(context).size.height / 6,
-              top: MediaQuery.of(context).size.height * 0,
-              child: Align(alignment: Alignment.center, child: Card()),
-            ),
             Positioned(
               top: MediaQuery.of(context).size.height / 4,
               right: MediaQuery.of(context).size.height / 23,
@@ -120,8 +114,8 @@ class _LoginPageState extends State<LoginPage> {
                 top: MediaQuery.of(context).size.height / 3,
                 left: MediaQuery.of(context).size.width / 2.8,
                 right: MediaQuery.of(context).size.width / 24,
-                child: Text('CHATTY',
-                    style: Theme.of(context).textTheme.headline6))
+                child:
+                    Text('LOGIN', style: Theme.of(context).textTheme.headline6))
           ],
         ),
       ),

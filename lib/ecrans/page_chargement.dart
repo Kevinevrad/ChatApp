@@ -27,7 +27,7 @@ class _LoadingPageState extends State<LoadingPage> {
     final size = MediaQuery.of(context).size.height;
     final size1 = MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Appcolors.secondary,
         body: Stack(
           children: [
             ImageChat(

@@ -36,8 +36,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: TappTheme.getTheme(brightness),
-      darkTheme: TappTheme.darkTheme,
+      theme: Apptheme.getTheme(brightness),
+      darkTheme: Apptheme.dark(),
       themeMode: ThemeMode.system,
       home: LoadingPage(),
     );
