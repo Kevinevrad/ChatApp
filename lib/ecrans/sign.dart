@@ -19,15 +19,15 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(imageback),
-              fit: BoxFit.cover,
-              colorFilter: ColorFilter.mode(
-                  Color.fromARGB(66, 0, 0, 0), BlendMode.darken)
+            // image: DecorationImage(
+            //image: AssetImage(imageback),
+            //fit: BoxFit.cover,
+            //colorFilter: ColorFilter.mode(
+            // Color.fromARGB(66, 0, 0, 0), BlendMode.darken)
 
-              // opacity: .7
-              ),
-        ),
+            // opacity: .7
+            // ),
+            ),
         child: Container(
           child: Stack(
             children: [
