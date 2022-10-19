@@ -20,7 +20,7 @@ class _OnbordingPgaeState extends State<OnbordingPgae> {
   bool test = true;
   String img3 = imglight3, img2 = imglight2, img1 = imglight1;
   Color? fond;
- 
+
   @override
   void initState() {
     super.initState();
@@ -59,25 +59,33 @@ class _OnbordingPgaeState extends State<OnbordingPgae> {
                 test = (index == 2);
               },
               children: [
-                Cartes(nom_img: img3),
-                Cartes(nom_img: img2),
                 Cartes(
+                  nom_img: img3,
+                  title: 'Welcome',
+                  bodytext1: 'zertyuiopfghjkdfghjk',
+                  bodytext2: 'fghjdfghjdfghfghfgh',
+                ),
+                Cartes(
+                  nom_img: img2,
+                  title: 'Follow steps',
+                  bodytext1: 'zertyuiopfghjkdfghjk',
+                  bodytext2: 'fghjdfghjdfghfghfgh',
+                ),
+                Cartes(
+                  title: 'Fast convivial',
+                  bodytext1: 'fghdfghjsdfghdfghjdfghsdfg',
+                  bodytext2: 'dfghjkqsdfghjkn',
                   nom_img: img1,
                 )
               ],
             ),
             Container(
-              alignment: Alignment(0, 0.6),
-              child: SmoothPageIndicator(
-                  controller: _pageviewcontroller, count: 3),
-            ),
-            Container(
                 alignment: Alignment(0, 0.85),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     //------------------------------
-                    GestureDetector(
+                    /* GestureDetector(
                       onTap: () {
                         _pageviewcontroller.previousPage(
                             duration: Duration(milliseconds: 500),
@@ -87,12 +95,12 @@ class _OnbordingPgaeState extends State<OnbordingPgae> {
                         Icons.arrow_back,
                         size: 35,
                       ),
-                    ),
+                    ),*/
                     SizedBox(
                       width: 20,
                     ),
 
-                    // -- ----- Changement effectué sur la derniere page au niveau du boutton next (next=>>Done) par le biais de la variable booleene
+                    // ------- Changement effectué sur la derniere page au niveau du boutton next (next=>>Done) par le biais de la variable booleene
                     test
                         ? GestureDetector(
                             onTap: () {
@@ -103,8 +111,8 @@ class _OnbordingPgaeState extends State<OnbordingPgae> {
                               });
                             },
                             child: Boutton(
-                              hauteur: 40.0,
-                              largeur: 80.0,
+                              hauteur: 50,
+                              largeur: 200,
                               nombtn: 'Next',
                               bordure: 10,
                             ))
@@ -119,8 +127,8 @@ class _OnbordingPgaeState extends State<OnbordingPgae> {
                               });
                             },
                             child: Boutton(
-                              hauteur: 40.0,
-                              largeur: 80.0,
+                              hauteur: 50,
+                              largeur: 200,
                               nombtn: 'Done',
                               bordure: 10,
                             )),

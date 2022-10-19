@@ -15,6 +15,8 @@ class LoadingPage extends StatefulWidget {
 
 class _LoadingPageState extends State<LoadingPage> {
   bool anime = true;
+  bool anime1 = false;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -31,8 +33,26 @@ class _LoadingPageState extends State<LoadingPage> {
         body: Stack(
           children: [
             ImageChat(
-              enhaut: anime ? -130 : 130,
-              agauche: anime ? -130 : 130,
+              enhaut: anime1
+                  ? (anime ? -150 : size / 5)
+                  : (anime ? size / 5 : size / 4.2),
+              agauche: 130,
+              adroite: 130,
+            ),
+            AnimatedPositioned(
+              duration: Duration(milliseconds: 1600),
+              top: MediaQuery.of(context).size.height / 1.5,
+              left: anime ? size1 / 2.5 : size1 / 4,
+              right: anime ? size1 / 2.5 : size1 / 4,
+              child: Container(
+                height: 15,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border.all(
+                      color: Colors.white,
+                    ),
+                    borderRadius: BorderRadius.circular(5)),
+              ),
             ),
 
             //------------- NOM DE L'APPLICATION AU CENTRE ---------//
@@ -74,7 +94,11 @@ class _LoadingPageState extends State<LoadingPage> {
     setState(() {
       anime = false;
     });
-    await Future.delayed(Duration(milliseconds: 4000));
+    await Future.delayed(Duration(milliseconds: 1500));
+    setState(() {
+      anime1 = true;
+    });
+    await Future.delayed(Duration(milliseconds: 2000));
     Navigator.pushReplacement(
         context,
         MaterialPageRoute(

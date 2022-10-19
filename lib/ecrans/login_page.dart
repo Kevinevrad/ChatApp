@@ -1,3 +1,4 @@
+import 'package:chatapp/ecrans/homePage.dart';
 import 'package:chatapp/ecrans/sign.dart';
 import 'package:chatapp/widgets_perso/bouttons.dart';
 import 'package:chatapp/widgets_perso/textfield.dart';
@@ -70,11 +71,25 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           height: 50,
                         ),
-                        Boutton(
-                          hauteur: 50,
-                          largeur: 370,
-                          nombtn: 'Submit',
-                          bordure: 25,
+                        GestureDetector(
+                          onTap: (() {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomePage(),
+                                ));
+                          
+                          
+                          
+                          
+                          
+                          }),
+                          child: Boutton(
+                            hauteur: 50,
+                            largeur: 370,
+                            nombtn: 'Submit',
+                            bordure: 25,
+                          ),
                         ),
                         SizedBox(
                           height: 30,
@@ -82,9 +97,9 @@ class _LoginPageState extends State<LoginPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(' I already have an account ',
-                                style: TextStyle(
-                                    color: Colors.black, fontSize: 15)),
+                            Text(
+                              ' I already have an account ',
+                            ),
                             Container(
                               padding: EdgeInsets.only(left: 10),
                               child: GestureDetector(

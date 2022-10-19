@@ -13,6 +13,7 @@ class Apptheme {
       scaffoldBackgroundColor: LightColors.background,
       visualDensity: visualDensity,
       cardColor: LightColors.card,
+      buttonColor: Colors.blue,
       primaryTextTheme:
           TextTheme(headline6: TextStyle(color: Appcolors.textdDark)),
       iconTheme: IconThemeData(color: Appcolors.iconDark),

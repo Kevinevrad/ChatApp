@@ -4,8 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Cartes extends StatelessWidget {
-  const Cartes({super.key, required this.nom_img});
-  final String nom_img;
+  const Cartes(
+      {super.key,
+      required this.nom_img,
+      required this.title,
+      required this.bodytext1,
+      required this.bodytext2});
+  final String nom_img, title, bodytext1, bodytext2;
 
   @override
   Widget build(BuildContext context) {
@@ -22,27 +27,41 @@ class Cartes extends StatelessWidget {
             ),
             Container(
               width: size1 * 0.9,
-              height: size * 0.21,
+              height: size * 0.9,
               child: Column(
                 //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    width: size1 * 0.7,
+                    height: size * 0.4,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(150),
+                    ),
+                    child: SvgPicture.asset(nom_img),
+                  ),
+                  SizedBox(
+                    height: 50,
+                  ),
                   Padding(
                     padding: const EdgeInsets.all(5),
                     child: Text(
-                      "Welcome",
-                      style: Theme.of(context).textTheme.headline4,
+                      title,
+                      style: Theme.of(context).textTheme.headline3,
                     ),
                   ),
                   Text(
-                    'Hello world how are you to day are felling Goood',
-                    style: Theme.of(context).textTheme.bodyLarge,
-                  ),
-                  Text(
-                    'Hello world how are you to day are felling Goood',
+                    bodytext1,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                   Text(
-                    'Hello world how are you  kkkkk',
+                    bodytext2,
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ),
+                  Text(
+                    bodytext2,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                   SizedBox(
@@ -55,17 +74,6 @@ class Cartes extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              width: size1 * 0.7,
-              height: size * 0.4,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(150),
-              ),
-              child: SvgPicture.asset(nom_img),
-            )
           ],
         ),
       ),

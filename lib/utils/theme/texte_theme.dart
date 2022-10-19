@@ -8,11 +8,14 @@ class TtextTheme {
         color: Colors.black,
         fontSize: 32,
       ),
+      headline3: GoogleFonts.poppins(
+          color: Colors.black,
+          textStyle: TextStyle(fontWeight: FontWeight.bold)),
       headline2: GoogleFonts.lobsterTwo(
           color: Colors.white, textStyle: TextStyle(fontSize: 100)),
       bodyText1: GoogleFonts.poppins(
           color: Colors.black54,
-          fontSize: 14,
+          fontSize: 18,
           textStyle: TextStyle(height: 1.7)),
       headline4: GoogleFonts.poppins(
           color: Colors.black87,
@@ -27,7 +30,7 @@ class TtextTheme {
       ),
       headline2: GoogleFonts.lobsterTwo(
           color: Colors.white, textStyle: TextStyle(fontSize: 100)),
-      bodyText1: GoogleFonts.poppins(
+      bodyText1: GoogleFonts.grandHotel(
           color: Colors.white, fontSize: 14, textStyle: TextStyle(height: 1.7)),
       headline4: GoogleFonts.poppins(
           color: Colors.white,
