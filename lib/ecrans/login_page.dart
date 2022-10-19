@@ -19,14 +19,14 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          //image: DecorationImage(
-              //image: AssetImage(imageback),
-              //fit: BoxFit.cover,
-              //colorFilter: ColorFilter.mode(
-                  //Color.fromARGB(66, 0, 0, 0), BlendMode.darken)
+          image: DecorationImage(
+              image: AssetImage(imageback),
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                  Color.fromARGB(66, 0, 0, 0), BlendMode.darken)
 
               // opacity: .7
-          //    ),
+              ),
         ),
         child: Stack(
           children: [
