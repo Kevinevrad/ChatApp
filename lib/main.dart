@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Chatty',
       theme: ThemeData(
         primaryColor: MyTheme.kPrimaryColor,
-        appBarTheme: AppBarTheme(color: Color(0xff7C7B9B)),
+        appBarTheme: AppBarTheme(color: Colors.blue),
         textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
         colorScheme:
             ColorScheme.fromSwatch().copyWith(secondary: MyTheme.kAccentColor),

@@ -1,5 +1,7 @@
 import 'package:chatapp/data_theme.dart';
 import 'package:flutter/material.dart';
+import '../Widgets/buildchat.dart';
+import '../Widgets/conversation_chat.dart';
 import '../models/user_model.dart';
 import '../models/message_model.dart';
 
@@ -47,46 +49,35 @@ class _ChatRoomState extends State<ChatRoom> {
             ),
           )
         ],
+        elevation: 0,
       ),
       backgroundColor: MyTheme.kPrimaryColor,
-      body: Column(
-        children: [
-          Expanded(
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    topRight: Radius.circular(30)),
-              ),
-              child: ClipRRect(
-                child: ListView.builder(
-                  itemCount: messages.length,
-                  itemBuilder: ((context, int index) {
-                    final message = messages[index];
-                    bool isMe = message.sender.id == currentUser.id;
-                    return Container(
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 15,
-                           backgroundImage: AssetImage(widget.user.avatar),
-                          ),
-                          Container(
-                            
-                            color: MyTheme.kAccentColor,
-                            
-                            child: Text(messages[index].text)),
-                        ],
-                      ),
-                    );
-                  }),
+      body: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).unfocus();
+        },
+        child: Column(
+          children: [
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30)),
+                ),
+                child: ClipRRect(
+                  child: ConVersation(
+                    widget: widget,
+                    user:currentUser,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+            buildChat(),
+          ],
+        ),
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:chatapp/ecrans/chat_room.dart';
 import 'package:flutter/material.dart';
 
 import '../data_theme.dart';
@@ -45,16 +46,25 @@ class AllChats extends StatelessWidget {
                     SizedBox(
                       width: 20,
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          allChat.sender.name,
-                          style: MyTheme.heading2.copyWith(fontSize: 15),
-                        ),
-                        Text(allChat.text, style: MyTheme.bodyText1),
-                      ],
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return ChatRoom(user: allChat.sender);
+                          },
+                        ));
+                      },
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            allChat.sender.name,
+                            style: MyTheme.heading2.copyWith(fontSize: 15),
+                          ),
+                          Text(allChat.text, style: MyTheme.bodyText1),
+                        ],
+                      ),
                     ),
                     Spacer(),
                     Column(

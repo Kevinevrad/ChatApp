@@ -52,7 +52,7 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
       appBar: AppBar(
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.menu),
+          icon: Icon(Icons.person),
         ),
         title: Text(
           'Chatty',
@@ -101,7 +101,7 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
           currentTableIndex == 0
               ? Icons.message_outlined
               : currentTableIndex == 1
-                  ? Icons.camera_alt
+                  ? Icons.phone
                   : Icons.contact_phone_outlined,
           color: Colors.white,
         ),

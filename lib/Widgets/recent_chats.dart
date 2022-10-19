@@ -21,7 +21,7 @@ class RecentChats extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                'Rencent Message',
+                'Recent Message',
                 style: MyTheme.heading2,
               ),
               Spacer(),
@@ -55,7 +55,7 @@ class RecentChats extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                                 builder: (BuildContext context) => ChatRoom(
-                                      user: currentUser,
+                                      user: recentChat.sender,
                                     )));
                       },
                       child: Column(
