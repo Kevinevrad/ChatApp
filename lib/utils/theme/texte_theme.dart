@@ -10,6 +10,7 @@ class TtextTheme {
       ),
       headline3: GoogleFonts.poppins(
           color: Colors.black,
+          fontSize: 28,
           textStyle: TextStyle(fontWeight: FontWeight.bold)),
       headline2: GoogleFonts.lobsterTwo(
           color: Colors.white, textStyle: TextStyle(fontSize: 100)),
@@ -31,7 +32,7 @@ class TtextTheme {
       headline2: GoogleFonts.lobsterTwo(
           color: Colors.white, textStyle: TextStyle(fontSize: 100)),
       bodyText1: GoogleFonts.grandHotel(
-          color: Colors.white, fontSize: 14, textStyle: TextStyle(height: 1.7)),
+          color: Colors.white, fontSize: 13, textStyle: TextStyle(height: 1.7)),
       headline4: GoogleFonts.poppins(
           color: Colors.white,
           fontSize: 24,
