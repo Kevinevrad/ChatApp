@@ -27,7 +27,7 @@ class MyTabBar extends StatelessWidget {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         ),
-        tabs: [
+        tabs: const [
           Tab(
             icon: Text(
               "Chat",
@@ -39,7 +39,7 @@ class MyTabBar extends StatelessWidget {
           ),
           Tab(
             icon: Text(
-              "Apple",
+              "Apples",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w600,
