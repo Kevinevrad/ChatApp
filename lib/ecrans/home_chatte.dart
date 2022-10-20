@@ -4,6 +4,7 @@ import 'package:chatapp/ecrans/chat_page.dart';
 import 'package:chatapp/models/message_model.dart';
 import 'package:flutter/material.dart';
 import '../Widgets/mt_tab_bar.dart';
+import 'chat_room.dart';
 
 class HomeChat extends StatefulWidget {
   const HomeChat({super.key});
@@ -218,10 +219,23 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
                                 Column(
                                   children: [
                                     Row(
-                                      children: const [
-                                        Icon(
-                                          Icons.message,
-                                        ),
+                                      children: [
+                                        IconButton(
+                                          onPressed: (() {
+                                            {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (BuildContext
+                                                              context) =>
+                                                          ChatRoom(
+                                                            user: recentChat
+                                                                .sender,
+                                                          )));
+                                            }
+                                          }),
+                                          icon: Icon(Icons.message),
+                                        )
                                       ],
                                     ),
                                     const SizedBox(
