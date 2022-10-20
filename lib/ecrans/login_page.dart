@@ -1,4 +1,5 @@
 import 'package:chatapp/ecrans/homePage.dart';
+import 'package:chatapp/ecrans/home_chatte.dart';
 import 'package:chatapp/ecrans/sign.dart';
 import 'package:chatapp/widgets_perso/bouttons.dart';
 import 'package:chatapp/widgets_perso/textfield.dart';
@@ -76,13 +77,8 @@ class _LoginPageState extends State<LoginPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => HomePage(),
+                                  builder: (context) => HomeChat(),
                                 ));
-                          
-                          
-                          
-                          
-                          
                           }),
                           child: Boutton(
                             hauteur: 50,
