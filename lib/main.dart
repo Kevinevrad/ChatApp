@@ -1,29 +1,45 @@
-import 'package:chatapp/data_theme.dart';
-import 'package:chatapp/ecrans/home_chatte.dart';
+import 'package:chatapp/ecrans/page_chargement.dart';
+import 'package:chatapp/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/scheduler.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Brightness brightness = Brightness.light;
+
+  @override
+  void initState() {
+    super.initState();
+    final window = WidgetsBinding.instance.window;
+
+    // This callback is called every time the brightness changes.
+    window.onPlatformBrightnessChanged = () {
+      final brightness = window.platformBrightness;
+    };
+    WidgetsBinding.instance.handlePlatformBrightnessChanged();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Chatty',
-      theme: ThemeData(
-        primaryColor: MyTheme.kPrimaryColor,
-        appBarTheme: AppBarTheme(color: Colors.blue),
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
-        colorScheme:
-            ColorScheme.fromSwatch().copyWith(secondary: MyTheme.kAccentColor),
-      ),
-      home: const HomeChat(),
+      title: 'Flutter Demo',
+      theme: Apptheme.getTheme(brightness),
+      darkTheme: Apptheme.dark(),
+      themeMode: ThemeMode.system,
+      home: LoadingPage(),
     );
   }
 }
