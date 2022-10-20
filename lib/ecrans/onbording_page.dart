@@ -62,19 +62,19 @@ class _OnbordingPgaeState extends State<OnbordingPgae> {
                 Cartes(
                   nom_img: img3,
                   title: 'Welcome',
-                  bodytext1: 'zertyuiopfghjkdfghjk',
-                  bodytext2: 'fghjdfghjdfghfghfgh',
+                  bodytext1: 'is simply dummy text of the printing',
+                  bodytext2: 'is simply dummy text of the printing',
                 ),
                 Cartes(
                   nom_img: img2,
                   title: 'Follow steps',
-                  bodytext1: 'zertyuiopfghjkdfghjk',
-                  bodytext2: 'fghjdfghjdfghfghfgh',
+                  bodytext1: 'is simply dummy text of the printing',
+                  bodytext2: 'is simply dummy text of the printing',
                 ),
                 Cartes(
                   title: 'Fast convivial',
-                  bodytext1: 'fghdfghjsdfghdfghjdfghsdfg',
-                  bodytext2: 'dfghjkqsdfghjkn',
+                  bodytext1: 'is simply dummy text of the printing',
+                  bodytext2: 'is simply dummy text of the printing',
                   nom_img: img1,
                 )
               ],
