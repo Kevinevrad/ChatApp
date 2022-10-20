@@ -7,14 +7,16 @@ class Message {
   final int unreadCount;
   final bool isRead;
   final String text;
+  final String icon;
 
-  Message({
+  Message( {
     required this.sender,
     required this.avatar,
     required this.time,
     required this.unreadCount,
     required this.text,
     required this.isRead,
+    required this.icon,
   });
 }
 
@@ -26,6 +28,7 @@ final List<Message> recentChats = [
     text: "typing...",
     unreadCount: 1,
     isRead: true,
+    icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: jason,
@@ -34,6 +37,7 @@ final List<Message> recentChats = [
     text: "Will I be in it?",
     unreadCount: 1,
     isRead: true,
+    icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: deanna,
@@ -42,6 +46,7 @@ final List<Message> recentChats = [
     text: "That's so cute.",
     unreadCount: 3,
     isRead: true,
+    icon: 'assets/icons/phoneicon.png',
   ),
   Message(
       sender: nathan,
@@ -49,7 +54,9 @@ final List<Message> recentChats = [
       time: '12:45',
       text: "Let me see what I can do.",
       unreadCount: 2,
-      isRead: false),
+      isRead: false,
+      icon: 'assets/icons/phoneicon.png',
+      ),
 ];
 
 final List<Message> allChats = [
@@ -58,8 +65,9 @@ final List<Message> allChats = [
     avatar: 'assets/images/Virgil.jpg',
     time: '12:59',
     text: "No! I just wanted",
-    unreadCount: 0,
+    unreadCount: 3,
     isRead: true,
+    icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: stanley,
@@ -68,14 +76,16 @@ final List<Message> allChats = [
     text: "You did what?",
     unreadCount: 1,
     isRead: false,
+    icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: leslie,
     avatar: 'assets/images/Leslie.jpg',
     time: '05:51',
-    unreadCount: 0,
+    unreadCount: 4,
     isRead: true,
     text: "just signed up for a tutor",
+    icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: judd,
@@ -84,6 +94,7 @@ final List<Message> allChats = [
     text: "May I ask you something?",
     unreadCount: 2,
     isRead: false,
+    icon: 'assets/icons/phoneicon.png',
   ),
 ];
 
@@ -95,6 +106,7 @@ final List<Message> messages = [
     text: "...",
     unreadCount: 1,
     isRead: true,
+    icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: currentUser,
@@ -103,6 +115,7 @@ final List<Message> messages = [
     text: "I’m going home.",
     avatar: '',
     unreadCount: 1,
+    icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: currentUser,
@@ -111,6 +124,7 @@ final List<Message> messages = [
     text: "See, I was right, this doesn’t interest me.",
     avatar: '',
     unreadCount: 1,
+       icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: addison,
@@ -119,6 +133,7 @@ final List<Message> messages = [
     text: "I sign your paychecks.",
     isRead: false,
     unreadCount: 1,
+       icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: addison,
@@ -127,6 +142,7 @@ final List<Message> messages = [
     text: "You think we have nothing to talk about?",
     isRead: false,
     unreadCount: 1,
+       icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: currentUser,
@@ -136,6 +152,7 @@ final List<Message> messages = [
         "Well, because I had no intention of being in your office. 20 minutes ago",
     avatar: '',
     unreadCount: 1,
+       icon: 'assets/icons/phoneicon.png',
   ),
   Message(
     sender: addison,
@@ -144,5 +161,6 @@ final List<Message> messages = [
     text: "I was expecting you in my office 20 minutes ago.",
     isRead: false,
     unreadCount: 1,
+       icon: 'assets/icons/phoneicon.png',
   ),
 ];

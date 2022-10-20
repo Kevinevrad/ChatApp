@@ -5,8 +5,7 @@ import 'package:chatapp/models/message_model.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../Widgets/mt_tab_bar.dart';
-import '../Widgets/recent_chats.dart';
-import '../models/user_model.dart';
+import 'chat_room.dart';
 
 class HomeChat extends StatefulWidget {
   const HomeChat({super.key});
@@ -22,7 +21,7 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
   void onTabChange() {
     setState(() {
       currentTableIndex = _tabController.index;
-      print(currentTableIndex);
+      (currentTableIndex);
     });
   }
 
@@ -124,11 +123,174 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
               ),
               child: TabBarView(controller: _tabController, children: [
                 ChatPage(),
-                Center(
-                  child: Text('Appel'),
+                Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(vertical: 5),
+                      child: Column(
+                        children: [],
+                      ),
+                    ),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      physics: ScrollPhysics(),
+                      itemCount: allChats.length,
+                      itemBuilder: ((context, int index) {
+                        final allChat = allChats[index];
+                        return Container(
+                            margin: const EdgeInsets.only(top: 25),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 27,
+                                  backgroundImage: AssetImage(allChat.avatar),
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                GestureDetector(
+                                  onTap: () {},
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        allChat.sender.name,
+                                        style: MyTheme.heading2
+                                            .copyWith(fontSize: 15),
+                                      ),
+                                      Text(allChat.time,
+                                          style: MyTheme.bodyText1),
+                                    ],
+                                  ),
+                                ),
+                                const Spacer(),
+                                const Icon(
+                                  Icons.phone,
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  children: [
+                                    allChat.unreadCount == 5
+                                        ? CircleAvatar(
+                                            radius: 8,
+                                            backgroundColor:
+                                                MyTheme.kUnreadChatBG,
+                                            child: Text(
+                                              allChat.unreadCount.toString(),
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          )
+                                        : CircleAvatar(
+                                            radius: 8,
+                                            backgroundColor:
+                                                MyTheme.kUnreadChatBG,
+                                            child: Text(
+                                              allChat.unreadCount.toString(),
+                                              style: const TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      allChat.time,
+                                      style: MyTheme.bodyTextTime,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ));
+                      }),
+                    ),
+                  ],
                 ),
-                Center(
-                  child: Text('Contact'),
+                Column(
+                  children: [
+                    Container(
+                      child: Column(
+                        children: [],
+                      ),
+                    ),
+                    ListView.builder(
+                      shrinkWrap: true,
+                      physics: ScrollPhysics(),
+                      itemCount: recentChats.length,
+                      itemBuilder: ((context, int index) {
+                        final recentChat = recentChats[index];
+                        return Container(
+                            margin: const EdgeInsets.only(top: 25),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 27,
+                                  backgroundImage:
+                                      AssetImage(recentChats[index].avatar),
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                GestureDetector(
+                                  onTap: () {},
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        recentChat.sender.name,
+                                        style: MyTheme.heading2
+                                            .copyWith(fontSize: 15),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const Spacer(),
+                                Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        IconButton(
+                                          onPressed: (() {
+                                            {
+                                              Navigator.push(
+                                                  context,
+                                                  MaterialPageRoute(
+                                                      builder: (BuildContext
+                                                              context) =>
+                                                          ChatRoom(
+                                                            user: recentChat
+                                                                .sender,
+                                                          )));
+                                            }
+                                          }),
+                                          icon: Icon(Icons.message),
+                                        )
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ));
+                      }),
+                    ),
+                  ],
                 ),
               ]),
             ),
@@ -145,7 +307,7 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
               ? Icons.message_outlined
               : currentTableIndex == 1
                   ? Icons.phone
-                  : Icons.contact_phone_outlined,
+                  : Icons.add,
           color: Colors.white,
         ),
       ),
