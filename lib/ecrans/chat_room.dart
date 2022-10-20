@@ -35,7 +35,7 @@ class _ChatRoomState extends State<ChatRoom> {
                   widget.user.name,
                   style: MyTheme.chatSenderName,
                 ),
-                Text('online', style: MyTheme.bodyText1.copyWith(fontSize: 18))
+                Text('online', style: MyTheme.bodyText2.copyWith(fontSize: 14)),
               ],
             ),
           ],
@@ -45,7 +45,7 @@ class _ChatRoomState extends State<ChatRoom> {
             onPressed: () {},
             icon: Icon(
               Icons.call,
-              size: 28,
+              size: 21,
             ),
           )
         ],
@@ -70,7 +70,7 @@ class _ChatRoomState extends State<ChatRoom> {
                 child: ClipRRect(
                   child: ConVersation(
                     widget: widget,
-                    user:currentUser,
+                    user: currentUser,
                   ),
                 ),
               ),
