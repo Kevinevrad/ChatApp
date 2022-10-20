@@ -2,6 +2,7 @@ import 'package:chatapp/Widgets/widgets.dart';
 import 'package:chatapp/data_theme.dart';
 import 'package:chatapp/ecrans/chat_page.dart';
 import 'package:chatapp/models/message_model.dart';
+import 'package:chatapp/pages/profilePage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../Widgets/mt_tab_bar.dart';
@@ -56,6 +57,11 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
         ),
         actions: [
           PopupMenuButton<MenuItem>(
+              onSelected: (item1) => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfilePage(),
+                  )),
               padding: EdgeInsets.all(0),
               color: Theme.of(context).appBarTheme.backgroundColor,
               itemBuilder: (context) => [
