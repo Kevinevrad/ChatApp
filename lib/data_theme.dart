@@ -5,7 +5,7 @@ class MyTheme {
   MyTheme._();
   static Color kPrimaryColor = Colors.blue;
   static Color kPrimaryColorVariant = Colors.blue;
-  static Color kAccentColor = Color.fromARGB(255, 0, 0, 0);
+  static Color kAccentColor = Color.fromARGB(255, 38, 76, 107);
   static Color kAccentColorVariant = Color.fromARGB(255, 151, 204, 248);
   static Color kUnreadChatBG = Color(0xffEE1D1D);
 

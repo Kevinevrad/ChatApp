@@ -305,6 +305,7 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
         ],
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: MyTheme.kAccentColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
