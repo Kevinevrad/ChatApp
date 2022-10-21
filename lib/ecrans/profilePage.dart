@@ -79,51 +79,58 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(
                   height: 50,
                 ),
-                TextFieldEdit(
-                  refText: '',
-                  label: 'Username',
-                  hauteur: 50,
-                  largeur: 370,
-                  bordure: 10,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                TextFieldEdit(
-                  refText: '',
-                  label: 'Full Name',
-                  hauteur: 50,
-                  largeur: 370,
-                  bordure: 10,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                TextFieldEdit(
-                  refText: '',
-                  label: 'Email Address',
-                  hauteur: 50,
-                  largeur: 370,
-                  bordure: 10,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                TextFieldEdit(
-                  refText: '',
-                  label: 'Phone Number',
-                  hauteur: 50,
-                  largeur: 370,
-                  bordure: 10,
-                ),
-                SizedBox(
-                  height: 50,
-                ),
-                Boutton(
-                  hauteur: 50,
-                  largeur: 370,
-                  nombtn: 'Save Changes',
-                  bordure: 10,
+                Container(
+                  width: MediaQuery.of(context).size.width / 1.2,
+                  child: Column(
+                    children: [
+                      TextFieldEdit(
+                        refText: '',
+                        label: 'Username',
+                        hauteur: 50,
+                        largeur: 370,
+                        bordure: 10,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextFieldEdit(
+                        refText: '',
+                        label: 'Full Name',
+                        hauteur: 50,
+                        largeur: 370,
+                        bordure: 10,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextFieldEdit(
+                        refText: '',
+                        label: 'Email Address',
+                        hauteur: 50,
+                        largeur: 370,
+                        bordure: 10,
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextFieldEdit(
+                        refText: '',
+                        label: 'Phone Number',
+                        hauteur: 50,
+                        largeur: 370,
+                        bordure: 10,
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Boutton(
+                        hauteur: 50,
+                        largeur: 370,
+                        nombtn: 'Save Changes',
+                        bordure: 10,
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
