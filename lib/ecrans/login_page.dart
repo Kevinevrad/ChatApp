@@ -73,13 +73,13 @@ class _LoginPageState extends State<LoginPage> {
                           height: 50,
                         ),
                         GestureDetector(
-                          onTap: (() {
+                          /*onTap: (() {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => HomePage(),
                                 ));
-                          }),
+                          }),*/
                           child: Boutton(
                             hauteur: 50,
                             largeur: 370,
