@@ -5,7 +5,7 @@ class MyTheme {
   MyTheme._();
   static Color kPrimaryColor = Colors.blue;
   static Color kPrimaryColorVariant = Colors.blue;
-  static Color kAccentColor = Color.fromARGB(255, 38, 76, 107);
+  static Color kAccentColor = Color.fromARGB(255, 0, 0, 0);
   static Color kAccentColorVariant = Color.fromARGB(255, 151, 204, 248);
   static Color kUnreadChatBG = Color(0xffEE1D1D);
 
@@ -26,14 +26,13 @@ class MyTheme {
   );
 
   static final TextStyle bodyText1 = TextStyle(
-     color: Color.fromARGB(255, 120, 131, 151),
+      color: Color.fromARGB(255, 120, 131, 151),
       fontSize: 10,
       letterSpacing: 1.2,
       fontWeight: FontWeight.w500);
 
-       static final TextStyle bodyText2 = TextStyle(
-      
-       color: Color.fromARGB(255, 17, 208, 65),
+  static final TextStyle bodyText2 = TextStyle(
+      color: Color.fromARGB(255, 17, 208, 65),
       fontSize: 12,
       letterSpacing: 1.2,
       fontWeight: FontWeight.w500);
