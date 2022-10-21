@@ -1,6 +1,7 @@
 import 'package:chatapp/Widgets/widgets.dart';
 import 'package:chatapp/data_theme.dart';
 import 'package:chatapp/ecrans/chat_page.dart';
+import 'package:chatapp/ecrans/setting.dart';
 import 'package:chatapp/models/message_model.dart';
 import 'package:flutter/material.dart';
 import '../Widgets/mt_tab_bar.dart';
@@ -50,7 +51,12 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+           onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    SettingChat()));},
           icon: Icon(Icons.person),
         ),
         title: Text(

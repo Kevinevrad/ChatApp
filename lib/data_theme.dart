@@ -26,14 +26,13 @@ class MyTheme {
   );
 
   static final TextStyle bodyText1 = TextStyle(
-     color: Color.fromARGB(255, 120, 131, 151),
+      color: Color.fromARGB(255, 120, 131, 151),
       fontSize: 10,
       letterSpacing: 1.2,
       fontWeight: FontWeight.w500);
 
-       static final TextStyle bodyText2 = TextStyle(
-      
-       color: Color.fromARGB(255, 17, 208, 65),
+  static final TextStyle bodyText2 = TextStyle(
+      color: Color.fromARGB(255, 17, 208, 65),
       fontSize: 12,
       letterSpacing: 1.2,
       fontWeight: FontWeight.w500);
