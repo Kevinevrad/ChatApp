@@ -17,13 +17,14 @@ class _ChatRoomState extends State<ChatRoom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
         toolbarHeight: 100,
         centerTitle: false,
         title: Row(
           children: [
             CircleAvatar(
-              
+
               radius: 30,
               backgroundImage: AssetImage(widget.user.avatar),
             ),
