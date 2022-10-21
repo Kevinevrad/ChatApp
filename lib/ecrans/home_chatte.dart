@@ -52,9 +52,12 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Chatty',
-          style: MyTheme.kAppTitle,
+        elevation: 0,
+        title: Center(
+          child: Text(
+            'Chatty',
+            style: MyTheme.kAppTitle,
+          ),
         ),
         actions: [
           PopupMenuButton<MenuItem>(
