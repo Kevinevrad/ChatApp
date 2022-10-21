@@ -184,6 +184,11 @@ class _SignUpState extends State<SignUp> {
                                 style: TextStyle(color: Colors.blue),
                               ),
                             ),
+                          ),
+                          Row(
+                            children: [
+                              
+                            ],
                           )
                         ],
                       )

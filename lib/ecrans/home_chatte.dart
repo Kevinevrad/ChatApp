@@ -61,6 +61,8 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
         ),
         actions: [
           PopupMenuButton<MenuItem>(
+              elevation: 0,
+              offset: Offset(0, 10),
               onSelected: (item1) => Navigator.push(
                   context,
                   MaterialPageRoute(

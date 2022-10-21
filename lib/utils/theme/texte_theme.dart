@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class TtextTheme {
   static TextTheme ligthTexttheme = TextTheme(
+    
       headline6: GoogleFonts.lobster(
         color: Colors.black,
         fontSize: 32,
