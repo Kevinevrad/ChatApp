@@ -1,6 +1,7 @@
 import 'package:chatapp/Widgets/widgets.dart';
 import 'package:chatapp/data_theme.dart';
 import 'package:chatapp/ecrans/chat_page.dart';
+import 'package:chatapp/ecrans/profilePage.dart';
 import 'package:chatapp/models/message_model.dart';
 import 'package:chatapp/pages/profilePage.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +61,7 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
               onSelected: (item1) => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProfilePage(),
+                    builder: (context) => HomePage(),
                   )),
               padding: EdgeInsets.all(0),
               color: Theme.of(context).appBarTheme.backgroundColor,

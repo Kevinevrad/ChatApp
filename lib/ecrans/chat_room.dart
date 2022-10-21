@@ -23,6 +23,7 @@ class _ChatRoomState extends State<ChatRoom> {
         title: Row(
           children: [
             CircleAvatar(
+              
               radius: 30,
               backgroundImage: AssetImage(widget.user.avatar),
             ),

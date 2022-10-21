@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:chatapp/ecrans/home_chatte.dart';
 import 'package:chatapp/ecrans/profilePage.dart';
 import 'package:chatapp/widgets_perso/bouttons.dart';
 import 'package:chatapp/widgets_perso/textfield.dart';
@@ -155,7 +156,7 @@ class _SignUpState extends State<SignUp> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HomePage(),
+                                builder: (context) => HomeChat(),
                               ));
                         },
                         child: Boutton(

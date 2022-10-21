@@ -57,12 +57,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Stack(
                   children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height / 4,
-                      width: MediaQuery.of(context).size.height / 4,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          color: Colors.black),
+                    CircleAvatar(
+                      radius: 80,
+                      backgroundImage: AssetImage('assets/images/Addison.jpg'),
                     ),
                     Positioned(
                         bottom: 2,
@@ -120,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                   bordure: 10,
                 ),
                 SizedBox(
-                  height: 70,
+                  height: 50,
                 ),
                 Boutton(
                   hauteur: 50,
