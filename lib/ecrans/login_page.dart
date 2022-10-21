@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                 elevation: 50,
                 borderRadius: BorderRadius.circular(24),
                 child: Container(
-                  width: MediaQuery.of(context).size.width / 1.2,
+                  width: MediaQuery.of(context).size.width / 1.4,
                   child: Padding(
                     padding: const EdgeInsets.all(30),
                     child: Column(

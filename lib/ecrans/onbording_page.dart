@@ -96,9 +96,6 @@ class _OnbordingPgaeState extends State<OnbordingPgae> {
                         size: 35,
                       ),
                     ),*/
-                    SizedBox(
-                      width: 20,
-                    ),
 
                     // ------- Changement effectué sur la derniere page au niveau du boutton next (next=>>Done) par le biais de la variable booleene
                     test

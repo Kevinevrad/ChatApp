@@ -45,7 +45,7 @@ class _SignUpState extends State<SignUp> {
                 child: Container(
                   decoration: BoxDecoration(),
                   width: MediaQuery.of(context).size.width / 1,
-                  height: MediaQuery.of(context).size.height / 1.25,
+                  height: MediaQuery.of(context).size.height / 1.2,
                   child: Column(
                     children: [
                       SizedBox(
@@ -69,7 +69,7 @@ class _SignUpState extends State<SignUp> {
                           refText: 'Your name',
                           label: 'Name',
                           hauteur: 55,
-                          bordure: 25,
+                          bordure: MediaQuery.of(context).size.width / 4,
                           largeur: 300),
                       SizedBox(
                         height: 20,
@@ -166,7 +166,7 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -185,7 +185,7 @@ class _SignUpState extends State<SignUp> {
                             ),
                           )
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
