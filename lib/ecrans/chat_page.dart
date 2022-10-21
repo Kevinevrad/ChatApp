@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../Widgets/widgets.dart';
-import '../Widgets/all_chatts.dart';
-import '../Widgets/recent_chats.dart';
+
 
 class ChatPage extends StatelessWidget {
   const ChatPage({
