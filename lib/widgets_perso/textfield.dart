@@ -7,13 +7,13 @@ class TextFieldEdit extends StatefulWidget {
       this.icon,
       this.obscur = false,
       this.couleurLabel = Colors.black,
-      required this.refText,
+      this.refText,
       required this.label,
       this.bordure = 0,
       required this.hauteur,
       required this.largeur});
   double hauteur, largeur, bordure;
-  String label, refText;
+  String? label, refText;
   Color couleurLabel;
   bool obscur;
   IconData? icon;

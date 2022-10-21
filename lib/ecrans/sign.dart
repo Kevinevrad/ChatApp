@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:chatapp/ecrans/homePage.dart';
+import 'package:chatapp/ecrans/profilePage.dart';
 import 'package:chatapp/widgets_perso/bouttons.dart';
 import 'package:chatapp/widgets_perso/textfield.dart';
 import 'package:flutter/material.dart';

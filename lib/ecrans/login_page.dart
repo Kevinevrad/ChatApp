@@ -1,4 +1,4 @@
-import 'package:chatapp/ecrans/homePage.dart';
+import 'package:chatapp/ecrans/profilePage.dart';
 import 'package:chatapp/ecrans/sign.dart';
 import 'package:chatapp/pages/pages.dart';
 import 'package:chatapp/widgets_perso/bouttons.dart';
