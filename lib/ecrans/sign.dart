@@ -151,13 +151,13 @@ class _SignUpState extends State<SignUp> {
                         height: 20,
                       ),
                       GestureDetector(
-                       /* onTap: () {
+                        onTap: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => HomePage(),
                               ));
-                        },*/
+                        },
                         child: Boutton(
                           hauteur: 50,
                           largeur: 300,
