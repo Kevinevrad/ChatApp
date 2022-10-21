@@ -6,7 +6,7 @@ Container buildChat() {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: 20),
     color: Colors.white,
-    height: 120,
+    height: 100,
     child: Row(
       children: [
         Expanded(
