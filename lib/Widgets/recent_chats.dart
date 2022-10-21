@@ -16,7 +16,7 @@ class RecentChats extends StatelessWidget {
       children: [
         Container(
           padding: EdgeInsets.only(
-            top: 20,
+            top: 10,
           ),
           child: Row(
             children: [
@@ -65,6 +65,9 @@ class RecentChats extends StatelessWidget {
                           Text(
                             recentChat.sender.name,
                             style: MyTheme.heading2.copyWith(fontSize: 15),
+                          ),
+                          SizedBox(
+                            height: 5,
                           ),
                           Text(recentChats[index].text,
                               style: MyTheme.bodyText1),

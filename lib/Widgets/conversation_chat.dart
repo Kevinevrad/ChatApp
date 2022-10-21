@@ -7,7 +7,9 @@ import '../models/user_model.dart';
 
 class ConVersation extends StatelessWidget {
   const ConVersation({
-    Key? key, required this.user, required ChatRoom widget,
+    Key? key,
+    required this.user,
+    required ChatRoom widget,
   }) : super(key: key);
 
   final User user;
@@ -21,7 +23,7 @@ class ConVersation extends StatelessWidget {
         final message = messages[index];
         bool isMe = message.sender.id == currentUser.id;
         return Container(
-          margin: EdgeInsets.only(top: 9),
+          margin: EdgeInsets.only(top: 8),
           child: Column(
             children: [
               Row(
@@ -60,21 +62,11 @@ class ConVersation extends StatelessWidget {
                       isMe ? MainAxisAlignment.end : MainAxisAlignment.start,
                   children: [
                     if (!isMe)
-                      SizedBox(
-                        width: 40,
+                      Icon(
+                        Icons.done_all,
+                        size: 20,
+                        color: MyTheme.bodyTextTime.color,
                       ),
-                    Icon(
-                      Icons.done_all,
-                      size: 20,
-                      color: MyTheme.bodyTextTime.color,
-                    ),
-                    SizedBox(
-                      width: 9,
-                    ),
-                    Text(
-                      message.time,
-                      style: MyTheme.bodyTextTime,
-                    )
                   ],
                 ),
               ),

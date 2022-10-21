@@ -51,12 +51,12 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-           onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (BuildContext context) =>
-                                    SettingChat()));},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => SettingChat()));
+          },
           icon: Icon(Icons.person),
         ),
         title: Text(
@@ -124,8 +124,11 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
                                         style: MyTheme.heading2
                                             .copyWith(fontSize: 15),
                                       ),
-                                      Text(allChat.time,
-                                          style: MyTheme.bodyText1),
+                                      Text(
+                                        allChat.time,
+                                        style: MyTheme.bodyTextTime
+                                            .copyWith(fontSize: 9),
+                                      )
                                     ],
                                   ),
                                 ),
@@ -165,13 +168,6 @@ class _HomeChatState extends State<HomeChat> with TickerProviderStateMixin {
                                               ),
                                             ),
                                           ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      allChat.time,
-                                      style: MyTheme.bodyTextTime,
-                                    ),
                                   ],
                                 ),
                               ],

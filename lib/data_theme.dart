@@ -32,7 +32,7 @@ class MyTheme {
       fontWeight: FontWeight.w500);
 
   static final TextStyle bodyText2 = TextStyle(
-      color: Color.fromARGB(255, 17, 208, 65),
+      color: Color.fromARGB(255, 255, 255, 255),
       fontSize: 12,
       letterSpacing: 1.2,
       fontWeight: FontWeight.w500);
@@ -42,7 +42,7 @@ class MyTheme {
 
   static final TextStyle bodyTextTime = TextStyle(
     color: Color.fromARGB(114, 10, 8, 24),
-    fontSize: 11,
+    fontSize: 10,
     fontWeight: FontWeight.bold,
     letterSpacing: 1,
   );

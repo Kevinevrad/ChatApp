@@ -62,6 +62,9 @@ class AllChats extends StatelessWidget {
                             allChat.sender.name,
                             style: MyTheme.heading2.copyWith(fontSize: 15),
                           ),
+                          SizedBox(
+                            height: 5,
+                          ),
                           Text(allChat.text, style: MyTheme.bodyText1),
                         ],
                       ),
@@ -81,13 +84,13 @@ class AllChats extends StatelessWidget {
                                   allChat.unreadCount.toString(),
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 12,
+                                    fontSize: 11,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Text(
                           allChat.time,

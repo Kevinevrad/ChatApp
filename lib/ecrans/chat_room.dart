@@ -18,7 +18,7 @@ class _ChatRoomState extends State<ChatRoom> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
+        toolbarHeight: 80,
         centerTitle: false,
         title: Row(
           children: [
@@ -27,7 +27,7 @@ class _ChatRoomState extends State<ChatRoom> {
               backgroundImage: AssetImage(widget.user.avatar),
             ),
             SizedBox(
-              width: 20,
+              width: 15,
             ),
             Column(
               children: [
@@ -41,16 +41,16 @@ class _ChatRoomState extends State<ChatRoom> {
           ],
         ),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
+          Container(
+            child: Icon(
               Icons.call,
               size: 21,
             ),
-          )
+          ),
         ],
         elevation: 0,
       ),
+      
       backgroundColor: MyTheme.kPrimaryColor,
       body: GestureDetector(
         onTap: () {
@@ -67,6 +67,7 @@ class _ChatRoomState extends State<ChatRoom> {
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30)),
                 ),
+                
                 child: ClipRRect(
                   child: ConVersation(
                     widget: widget,
